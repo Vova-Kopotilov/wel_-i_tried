@@ -1,0 +1,380 @@
+@font-face{
+    src:url('fonts/Montserrat-Regular.ttf');
+    font-family: 'Monterrat-Regular';
+}
+@font-face{
+    src:url('fonts/Montserrat-SemiBold.ttf');
+    font-family: 'Monterrat-SemiBold';
+}
+@font-face{
+    src:url('fonts/Montserrat-Bold.ttf');
+    font-family: 'Monterrat-Bold';
+}
+:root{
+    --main-font-size: 16px;
+    /*Названия шрифтов*/
+
+    --main-font-family: 'Monterrat-Regular';
+    --rob-bold: 'RobotoSlab-Bold';
+    --mon-bold: 'Monterrat-Bold';
+    --mon-semibold: 'Monterrat-SemiBold';
+
+    /* Цвета*/
+    --red: #FF2337;
+    --black: #1C1C1C;
+    --blue: #6889E8;
+
+
+    --col-cnt: 12;
+    --container-width: 1200;
+    --col: calc(  (var(--container-width) / var(--col-cnt) ));
+    --col-percent: calc(  (var(--col) / var(--container-width) )  )
+}
+body{
+    font: var(--main-font-size) var(--main-font-family);
+   	background-color: var(--black);
+}
+.head a,.information{
+    color: #707070;
+}
+.container{
+    width: 300px;
+}
+.menu-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  transition: 0.2s;
+}
+.menu-btn span::before {
+  transform: translateY(-5px);
+}
+.menu-btn span::after {
+  transform: translateY(5px);
+}
+.heah-lodo,.head-menu,.section{
+	display: inline-block;
+}
+.page-btn{
+	border-radius: 50px;
+	background-color: transparent;
+	font: 16px var(--mon-reg);
+	border: 2px solid #fff;
+	color: #fff;
+	padding:13px 33px;
+}
+.heading,.bloks,.page-btn,.end,.figures a{
+	color: #FFFFFF;
+} 
+@media screen and (min-width: 320px){
+	.container{
+        width: 320px;
+    }
+    .head-menu{
+    	display: none;
+    }
+    .heah-lodo{
+    	padding-left:100px;
+    	padding-right: 26px;
+    	padding-top: 15px; 
+    	position: relative;
+    }
+    .menu-btn{
+    	position: absolute;
+    	top: 0px;
+    	right: 0px;
+    }
+    ul.figures li{
+    	display: inline;  
+    	padding: 3px;
+    	margin-right: 30px;
+    }
+    .figures{
+    	margin-left: 60px;
+    	margin-top: 25px;
+    }
+    .heading{
+    	margin-top: 10px;
+    	font-size:30px;
+    }
+    .bloks {
+    	margin-top: 10px;
+    	font-size: 24px;
+    	margin-left: 30px;
+    }
+    .information{
+    	padding-top: 15px;
+    	font-size: 17px;
+    }
+    .page-btn{
+    	width: 100px;
+		margin-top: 42px;
+		cursor: pointer;
+		padding-left: 20px;
+		line-height: 25px;
+	}
+	.end{
+		margin-top: 15px;
+		position: relative;
+	}
+	.pipec,.the{
+		padding-bottom: 20px;
+	}
+	.min{
+ 		width: 100%;
+		height: 100%;
+ 	}
+ 	.box{
+		position: absolute;
+		top: 490px;
+    	left: 120px;
+	}
+	.align,.img{
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+@media screen and (min-width: 750px){
+	.container{
+        width: 740px;
+    }
+	.section{
+		display: none;
+	}
+	.heah-lodo,.head-menu{
+    	vertical-align: middle;
+    }
+    .heah-lodo{
+    	padding-left:24px;
+    	padding-right: 26px;
+    	padding-top: 15px; 
+    }
+    .head-menu{
+    	display: inline-block; ;
+    	padding-left: 25px;
+    	font-size: 12px;
+    }
+    .head-menu a:hover{
+		color: #FFFFFF;
+    }
+    .head-menu a{
+    	padding-right: 20px;
+    }
+     .content{
+		margin-left: 170px; 
+		position: relative;
+	}
+	.figures{
+		position: absolute;
+		font-size: 15px;
+		left: 36px;
+		top: 233px;
+		margin-left: 0px;
+	}
+	ul.figures li{
+    	display: block;  
+    	padding: 3px;
+    }
+	.figures li{
+		padding-bottom: 25px; 
+	}
+	.figures a:hover {
+		color: #FF0000;
+	}
+	.heading{
+		margin-top: 25px;
+		font-size: 38px;
+	}
+	.bloks {
+		margin-top: 10px;
+		font-size: 12px;
+	}
+	.information{
+		margin-top: 25px;
+		font-size: 9px;
+		line-height: 20px;
+	}
+	.page-btn{
+		width: 220px;
+		margin-top: 42px;
+		cursor: pointer;
+	}
+	.sail {
+		margin-right:15px;
+	}
+	.box{
+		position: absolute;
+		top: 290px;
+		left: 430px;
+	}
+	.end{
+		margin-left: 200px;
+		margin-top: 30px;
+		display: inline-block;
+	}
+	.align,.img{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.pipec{
+		margin-right: 0px;
+		padding-bottom: 10px;
+	}
+	.align{
+		padding-left: 5px;
+		font-size: 10px;
+	}
+	.line{
+		position: absolute;
+		height:550px;
+		width: 1px;
+		background-color: #707070;
+		left: 85px;
+		top: 0px;
+	}
+ 	.img-logo{
+ 		width: 50%;
+ 		height: 50%;
+ 	}
+ 	.min{
+ 		width: 80%;
+		height: 80%;
+ 	}
+ 	.img{
+ 		width: 20%;
+ 		height: 20%;
+ 	}
+
+} 
+@media screen and (min-width: 1200px){
+    .container{
+        width: 1200px;
+    }
+    .heah-lodo,.head-menu{
+    	vertical-align: middle;
+    }
+    .heah-lodo{
+    	padding-left:34px;
+    	padding-right: 36px;
+    	padding-top: 25px; 
+    }
+    .head-menu{
+    	display: inline-block;
+    	padding-left: 90px;
+    	font-size: 18px;
+    }
+    .head-menu a:hover{
+		color: #FFFFFF;
+    }
+    .head-menu a{
+    	padding-right: 40px;
+    }
+    .content{
+		margin-left: 250px; 
+		position: relative;
+	}
+	.theend{
+		margin-left: -50px; 
+	}
+	.figures{
+		position: absolute;
+		font-size: 22px;
+		left: 73px;
+		top: 465px;
+	}
+	ul.figures li{
+		padding-bottom: 100px;
+		display: block;
+    	padding: 3px;
+    	padding-bottom: 40px; 
+	}
+	.figures a:hover {
+		color: #FF0000;
+	}
+	.figures a:active  {
+		background: url(../img/boll.png);
+	}
+	.heading{
+		margin-top: 100px;
+		font-size: 75px;
+	}
+	.bloks {
+		margin-top: 20px;
+		font-size: 25px;
+	}
+	.information{
+		margin-top: 50px;
+		font-size: 18px;
+		line-height: 40px;
+	}
+	.page-btn{
+		width: 368px;
+		margin-top: 85px;
+		cursor: pointer;
+		font-size: 20px;
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+	.sail {
+		margin-right:125px;
+	}
+	.box{
+		position: absolute;
+		top: 150px;
+		left: 1050px;
+	}
+	.end{
+		margin-top: 125px;
+		display: inline-block;
+		margin-left: 270px;
+	}
+	.pipec,.align,.img,.the{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.pipec{
+		margin-right: 55px;
+	}
+	.align{
+		padding-left: 10px;
+		font-size: 14px;
+	}
+	.line{
+		position: absolute;
+		height:1080px;
+		width: 2px;
+		background-color: #707070;
+		left: 170px;
+		top: 0px;
+	}
+	.img-logo{
+ 		width: 100%;
+ 		height: 100%;
+ 	}
+ 	.img{
+ 		width: 26%;
+ 		height: 30%;
+ 	}
+ 	.min{
+ 		width: 110%;
+		height: 110%;
+ 	}
+}
